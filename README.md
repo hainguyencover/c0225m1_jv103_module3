@@ -10,13 +10,13 @@
 
 📘 **Slide liên quan:**
 
-- 📄 **Slide 01 - Database Introduction**  
+- 📄 **Database Introduction**  
   ✨ Giới thiệu về CSDL, các mô hình dữ liệu, hệ quản trị.
 
-- 📄 **Slide 02 - Database Design**  
+- 📄 **Database Design**  
   ✨ Thiết kế ERD, chuyển sang mô hình quan hệ, xác định khóa và ràng buộc.
 
-- 📄 **Slide 05 - Indexs, Store Procedure, Views**  
+- 📄 **Indexs, Store Procedure, Views**  
   ✨ Hiểu cách sử dụng Index, tạo View và Stored Procedure nâng cao.
 
 ---
@@ -27,13 +27,13 @@
 
 📘 **Slide liên quan:**
 
-- 📄 **Slide 03 - Database Query**  
+- 📄 **Database Query**  
   ✨ Thao tác với `SELECT`, `JOIN`, `GROUP BY`, `ORDER BY`,...
 
-- 📄 **Slide 04 - Hàm thông dụng**  
+- 📄 **Hàm thông dụng**  
   ✨ Các hàm như `COUNT()`, `AVG()`, `NOW()`, `SUBSTRING()`,...
 
-- 📄 **Slide 05 - Indexs, Store Procedure, Views**  
+- 📄 **Indexs, Store Procedure, Views**  
   ✨ Tăng hiệu suất truy vấn và viết lệnh nâng cao bằng Stored Procedure.
 
 ---
@@ -44,13 +44,13 @@
 
 📘 **Slide liên quan:**
 
-- 📄 **Slide 06 - CSS**  
+- 📄 **CSS**  
   ✨ Làm quen với selector, thuộc tính, pseudo-class,...
 
-- 📄 **Slide 07 - Thiết kế bố cục trang web**  
+- 📄 **Thiết kế bố cục trang web**  
   ✨ Cách chia layout bằng `flex`, `grid`, quản lý padding/margin.
 
-- 📄 **Slide 08 - Bootstrap**  
+- 📄 **Bootstrap**  
   ✨ Tận dụng framework giúp tăng tốc thiết kế responsive web.
 
 ---
@@ -61,13 +61,13 @@
 
 📘 **Slide liên quan:**
 
-- 📄 **Slide 09 - Web Application OverView**  
+- 📄 **Web Application OverView**  
   ✨ Kiến trúc 3 lớp: presentation, business, data layer.
 
-- 📄 **Slide 11 - MVC**  
+- 📄 **MVC**  
   ✨ Phân chia mã nguồn rõ ràng: Model - View - Controller.
 
-- 📄 **Slide 14 - Packaging & Dependences Management**  
+- 📄 **Packaging & Dependences Management**  
   ✨ Quản lý thư viện với Maven, cấu trúc dự án `WAR`, `JAR`.
 
 ---
@@ -78,29 +78,17 @@
 
 📘 **Slide liên quan:**
 
-- 📄 **Slide 10 - JSP & JSTL**  
+- 📄 **JSP & JSTL**  
   ✨ Dùng JSP hiển thị dữ liệu, JSTL viết logic ngay trong HTML.
 
-- 📄 **Slide 12 - JDBC & CRUD**  
+- 📄 **JDBC & CRUD**  
   ✨ Kết nối database, thực hiện thêm - sửa - xóa - đọc.
 
-- 📄 **Slide 13 - JDBC Querying & Transaction**  
+- 📄 **JDBC Querying & Transaction**  
   ✨ Giao dịch (Transaction), rollback khi có lỗi.
 
-- 📄 **Slide 14 - Packaging & Dependences Management**  
+- 📄 **Packaging & Dependences Management**  
   ✨ Đóng gói app thành `.war`, deploy lên Tomcat/Glassfish.
-
----
-
-## ✅ Tổng quan phân bổ Slide theo Mục tiêu
-
-| Mục tiêu | Slide liên quan |
-|---------|-----------------|
-| 🎯 Thiết kế CSDL | 01, 02, 05 |
-| 🎯 Sử dụng SQL   | 03, 04, 05 |
-| 🎯 Sử dụng CSS   | 06, 07, 08 |
-| 🎯 Mô hình Web   | 09, 11, 14 |
-| 🎯 Java Web App  | 10, 12, 13, 14 |
 
 ---
 
