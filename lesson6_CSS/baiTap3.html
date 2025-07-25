@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kho Tàng Truyện Việt</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      #wrapper {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header với tiêu đề */
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 20px 0;
+        border-bottom: 3px solid #8b0000;
+      }
+
+      .header h1 {
+        color: #8b0000;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .header p {
+        color: #666;
+        font-style: italic;
+        font-size: 1.1em;
+      }
+
+      /* Ảnh banner */
+      .banner {
+        width: 100%;
+        height: 250px;
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+        background-size: 400% 400%;
+        animation: gradientShift 8s ease infinite;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2em;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        position: relative;
+      }
+
+      .banner::before {
+        content: "📚 Kho Tàng Truyện Việt Nam 📚";
+        z-index: 1;
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Mục lục */
+      .toc {
+        background: linear-gradient(135deg, #f4f4f4 0%, #e8e8e8 100%);
+        border-left: 6px solid #8b0000;
+        padding: 25px 30px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .toc h4 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: #8b0000;
+        font-size: 1.4em;
+        text-align: center;
+        border-bottom: 2px solid #8b0000;
+        padding-bottom: 10px;
+      }
+
+      .toc a {
+        text-decoration: none;
+        color: #0077cc;
+        display: block;
+        margin: 12px 0;
+        padding: 10px 15px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .toc a:hover {
+        background: #0077cc;
+        color: white;
+        transform: translateX(10px);
+        box-shadow: 0 3px 10px rgba(0, 119, 204, 0.3);
+      }
+
+      /* Nội dung truyện */
+      .story {
+        margin-bottom: 50px;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        border-top: 4px solid #8b0000;
+      }
+
+      .story h5 {
+        font-size: 1.6em;
+        color: #8b0000;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #ddd;
+        text-align: center;
+        background: linear-gradient(135deg, #8b0000, #a00000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .story-image {
+        text-align: center;
+        margin: 25px 0;
+      }
+
+      .story-image img {
+        max-width: 100%;
+        max-height: 300px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+      }
+
+      .story-image img:hover {
+        transform: scale(1.02);
+      }
+
+      .story-image p {
+        font-size: 14px;
+        color: #888;
+        font-style: italic;
+        margin-top: 10px;
+        text-align: center;
+        text-indent: 0 !important;
+      }
+
+      .story p {
+        text-align: justify;
+        text-indent: 30px;
+        margin-bottom: 15px;
+        font-size: 1.05em;
+        color: #444;
+      }
+
+      .story p:first-of-type {
+        font-size: 1.1em;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .story em {
+        color: #8b0000;
+        font-weight: 600;
+      }
+
+      /* Nút quay lại đầu trang */
+      .back-to-top {
+        text-align: right;
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+      }
+
+      .back-to-top a {
+        background: #8b0000;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .back-to-top a:hover {
+        background: #a00000;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
+      }
+
+      /* Footer */
+      .footer {
+        text-align: center;
+        padding: 30px 0;
+        border-top: 2px solid #8b0000;
+        margin-top: 40px;
+        color: #666;
+      }
+
+      .footer p {
+        margin: 5px 0;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        #wrapper {
+          margin: 10px;
+          padding: 15px;
+        }
+
+        .header h1 {
+          font-size: 2em;
+        }
+
+        .banner {
+          height: 200px;
+          font-size: 1.5em;
+        }
+
+        .toc {
+          padding: 20px;
+        }
+
+        .story {
+          padding: 20px;
+        }
+
+        .story h5 {
+          font-size: 1.4em;
+        }
+      }
+
+      /* Hiệu ứng khi load trang */
+      .story {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease forwards;
+      }
+
+      .story:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .story:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .story:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Scroll indicator */
+      .scroll-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 4px;
+        background: linear-gradient(to right, #8b0000, #ff6b6b);
+        z-index: 1000;
+        transition: width 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <div id="wrapper">
+      <!-- Header -->
+      <div class="header">
+        <h1>Kho Tàng Truyện Việt</h1>
+        <p>Những câu chuyện bất hủ trong văn học Việt Nam</p>
+      </div>
+
+      <!-- Banner -->
+      <div class="banner"></div>
+
+      <!-- Mục lục -->
+      <div class="toc">
+        <h4>📖 Mục Lục Truyện</h4>
+        <a href="#truyen1">🌸 Truyện ngắn: Cô bé bán diêm</a>
+        <a href="#truyen2">🌙 Truyện cổ tích: Tấm Cám</a>
+        <a href="#truyen3">🦊 Truyện ngụ ngôn: Con cáo và chùm nho</a>
+      </div>
+
+      <!-- Nội dung truyện -->
+      <div id="truyen1" class="story">
+        <h5>Truyện ngắn: Cô bé bán diêm</h5>
+        <div class="story-image">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ4ptQDpf0Myy94OviLTw6lu21ZJ-MYBMEHw&s"
+            alt="Cô bé bán diêm"
+          />
+          <p>Hình ảnh minh họa: Cô bé bán diêm trong đêm giá rét</p>
+        </div>
+        <p>
+          Đêm giao thừa, trời lạnh buốt. Tuyết rơi trắng xóa cả bầu trời
+          Copenhagen. Trong góc phố tối tăm, một cô bé đầu trần chân đất, mặc
+          chiếc áo mỏng đã rách, đang cố gắng đi bán từng que diêm giữa giá lạnh
+          mùa đông. Không ai đoái hoài. Không ai mua. Không ai quan tâm. Cô bé
+          sợ trở về nhà vì biết rằng không bán được diêm, bố sẽ đánh. Cô lặng lẽ
+          co ro ngồi giữa góc tường hai căn nhà, ôm lấy đầu gối và run lẩy bẩy.
+        </p>
+        <p>
+          Để sưởi ấm, cô quẹt một que diêm. Trong ánh sáng le lói ấy, cô thấy
+          mình đang ngồi trước một bếp lửa đỏ rực, ấm áp vô cùng. Nhưng rồi que
+          diêm tắt, bếp lửa biến mất. Cô lại quẹt thêm một que, lần này là một
+          bàn tiệc xa hoa hiện ra với ngỗng quay, bánh ngọt và rượu nho. Nhưng
+          khi diêm tắt, mọi thứ cũng biến mất.
+        </p>
+        <p>
+          Cứ thế, mỗi que diêm là một phép màu. Cô bé thấy cây thông Noel lung
+          linh ánh sáng, thấy người bà yêu thương – người duy nhất đã từng ôm cô
+          vào lòng, nay đã qua đời. Trong ánh sáng cuối cùng, cô ước bà mang cô
+          đi – đi thật xa nơi lạnh lẽo này, nơi không còn đói, rét, và cô đơn.
+        </p>
+        <p>
+          Sáng hôm sau, người ta tìm thấy cô bé đã chết trong giá rét, tay vẫn
+          nắm chặt những que diêm đã tàn. Nhưng không ai biết rằng, trong những
+          khoảnh khắc cuối cùng, cô bé đã sống trong yêu thương và ấm áp mà cả
+          đời chưa từng có.
+          <em
+            >Câu chuyện nhắc nhở chúng ta về lòng từ bi và sự quan tâm đến những
+            người kém may mắn.</em
+          >
+        </p>
+        <div class="back-to-top">
+          <a href="#wrapper">↑ Quay lại đầu trang</a>
+        </div>
+      </div>
+
+      <div id="truyen2" class="story">
+        <h5>Truyện cổ tích: Tấm Cám</h5>
+        <div class="story-image">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5b131me3Qz51iGfJivcZe40CSpUKV2J5ysHzhjMRZj5rFfKBPHqL7o9AD7FM-cqt3hUk&usqp=CAU"
+            alt="Tấm Cám"
+          />
+          <p>Hình ảnh minh họa: Chuyện cổ tích Tấm Cám</p>
+        </div>
+        <p>
+          Ngày xưa, có hai chị em cùng cha khác mẹ: Tấm và Cám. Tấm hiền lành,
+          chăm chỉ, thật thà; còn Cám lười biếng, gian xảo, được mẹ kế bênh vực
+          mọi điều. Mỗi ngày, Tấm phải làm đủ việc từ sáng sớm tới tối khuya,
+          trong khi Cám được nuông chiều chẳng phải đụng tay vào việc gì.
+        </p>
+        <p>
+          Một hôm, mẹ kế sai hai chị em ra đồng bắt tép. Ai bắt được nhiều hơn
+          sẽ được thưởng một cái yếm đỏ. Tấm chăm chỉ nên bắt được cả giỏ đầy,
+          còn Cám lười biếng, mãi mê chơi nên không có gì. Thấy Tấm quay lưng,
+          Cám lén đổ hết tép của Tấm vào giỏ mình. Về nhà, mẹ kế không hỏi han
+          gì, lập tức thưởng yếm cho Cám. Tấm tủi thân khóc nức nở. May thay,
+          Bụt hiện lên, an ủi và giúp đỡ Tấm tìm lại con cá bống còn sót lại –
+          người bạn nhỏ duy nhất bên Tấm lúc ấy.
+        </p>
+        <p>
+          Nhưng mẹ con Cám vẫn không buông tha. Họ tìm cách giết cá bống, lừa
+          Tấm làm mất chiếc áo đẹp, rồi cuối cùng còn hãm hại Tấm chết oan để
+          Cám được thế vào làm hoàng hậu. Tuy nhiên, linh hồn Tấm không siêu
+          thoát. Tấm liên tục đầu thai qua nhiều hình dạng khác nhau: chim vàng
+          anh, cây xoan đào, khung dệt, quả thị... Mỗi lần bị mẹ con Cám phát
+          hiện và hãm hại, Tấm lại tái sinh mạnh mẽ hơn, kiên cường hơn.
+        </p>
+        <p>
+          Cuối cùng, Tấm trở về hình hài ban đầu, gặp lại nhà vua và vạch trần
+          sự thật. Mẹ con Cám bị trừng phạt thích đáng. Tấm lấy lại công bằng và
+          sống hạnh phúc bên nhà vua. Câu chuyện khép lại bằng bài học sâu sắc:
+          <em
+            >người tốt dù có bị hãm hại bao nhiêu lần, cuối cùng cũng sẽ được
+            minh oan, còn kẻ xấu sớm muộn cũng phải chịu quả báo.</em
+          >
+        </p>
+        <div class="back-to-top">
+          <a href="#wrapper">↑ Quay lại đầu trang</a>
+        </div>
+      </div>
+
+      <div id="truyen3" class="story">
+        <h5>Truyện ngụ ngôn: Con cáo và chùm nho</h5>
+        <div class="story-image">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCsQpF523RfQI7qsATs8iVZj6wTKSctlpQ3g&s"
+            alt="Con cáo và chùm nho"
+          />
+          <p>Hình ảnh minh họa: Con cáo và chùm nho</p>
+        </div>
+        <p>
+          Vào một buổi trưa hè oi ả, một con cáo đói bụng lang thang trong rừng
+          để tìm kiếm thức ăn. Nó đi mãi, đi mãi mà chẳng thấy gì ngoài nắng gắt
+          và đất khô cằn. Bỗng dưng, trong lúc tuyệt vọng, nó phát hiện ra một
+          giàn nho sai trĩu quả. Những chùm nho mọng nước, căng tròn, lấp lánh
+          dưới ánh mặt trời trông ngon lành và hấp dẫn vô cùng.
+        </p>
+        <p>
+          Con cáo hào hứng nhảy lên để hái nho ăn. Nhưng những chùm nho lại ở
+          quá cao so với tầm với của nó. Nó cố gắng bật nhảy, lấy đà, thậm chí
+          trèo lên cả gốc cây gần đó – nhưng tất cả đều vô ích. Những chùm nho
+          kia cứ như trêu ngươi, chỉ cách đầu mũi nó vài tấc mà vẫn không thể
+          với tới được.
+        </p>
+        <p>
+          Sau vài lần thử mà vẫn thất bại, con cáo bắt đầu cảm thấy bực bội và
+          xấu hổ. Không muốn thừa nhận rằng mình đã thua cuộc, nó ngẩng đầu lên,
+          nhăn mặt rồi nói lớn: "Chùm nho đó chắc chắn còn xanh lè! Ăn vào chỉ
+          tổ đau bụng!". Nói xong, nó quay lưng bỏ đi, cố gắng giữ thể diện
+          trong khi bụng vẫn đói meo.
+        </p>
+        <p>
+          Câu chuyện này tuy ngắn nhưng chứa đựng bài học thâm thúy. Nó phản ánh
+          thói quen phổ biến của con người: khi không đạt được điều mình mong
+          muốn, ta thường viện cớ để che đậy thất bại, thay vì chấp nhận sự thật
+          và tiếp tục cố gắng. Đây cũng là nguồn gốc của câu thành ngữ nổi
+          tiếng: <em>"Chùm nho còn xanh"</em> – ám chỉ việc tự dối mình khi
+          không đạt được điều gì đó.
+        </p>
+        <div class="back-to-top">
+          <a href="#wrapper">↑ Quay lại đầu trang</a>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p><strong>Kho Tàng Truyện Việt</strong></p>
+        <p>Bảo tồn và lan tỏa văn hóa đọc Việt Nam</p>
+        <p style="font-size: 0.9em; color: #999">© 2024 - Được tạo với ❤️</p>
+      </div>
+    </div>
+  </body>
+</html>
