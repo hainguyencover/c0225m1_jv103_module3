@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook Clone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">facebook</div>
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Tìm kiếm trên Facebook" />
+      </div>
+      <div class="nav-icons">
+        <div class="nav-icon active">
+          <i class="fas fa-home"></i>
+        </div>
+        <div class="nav-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="nav-icon">
+          <i class="fas fa-tv"></i>
+        </div>
+        <div class="nav-icon">
+          <i class="fas fa-store"></i>
+        </div>
+        <div class="nav-icon">
+          <i class="fas fa-bell"></i>
+        </div>
+        <div class="nav-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="profile-pic">
+          <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            alt="Profile"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Left Sidebar -->
+      <div class="left-sidebar">
+        <div class="sidebar-item">
+          <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            alt="Profile"
+          />
+          <div class="sidebar-title">Nguyễn Văn An</div>
+        </div>
+        <div class="sidebar-item">
+          <i class="fas fa-user-friends"></i>
+          <div class="sidebar-title">Bạn bè</div>
+        </div>
+        <div class="sidebar-item">
+          <i class="fas fa-users"></i>
+          <div class="sidebar-title">Nhóm</div>
+        </div>
+        <div class="sidebar-item">
+          <i class="fas fa-store"></i>
+          <div class="sidebar-title">Marketplace</div>
+        </div>
+        <div class="sidebar-item">
+          <i class="fas fa-tv"></i>
+          <div class="sidebar-title">Watch</div>
+        </div>
+        <div class="sidebar-item">
+          <i class="fas fa-history"></i>
+          <div class="sidebar-title">Kỷ niệm</div>
+        </div>
+        <div class="sidebar-item">
+          <i class="fas fa-bookmark"></i>
+          <div class="sidebar-title">Đã lưu</div>
+        </div>
+        <div class="sidebar-item">
+          <i class="fas fa-flag"></i>
+          <div class="sidebar-title">Trang</div>
+        </div>
+        <div class="sidebar-item">
+          <i class="fas fa-calendar"></i>
+          <div class="sidebar-title">Sự kiện</div>
+        </div>
+        <div class="sidebar-item">
+          <i class="fas fa-chevron-down"></i>
+          <div class="sidebar-title">Xem thêm</div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="sidebar-heading">Lối tắt của bạn</div>
+        <div class="sidebar-item">
+          <img src="https://picsum.photos/id/101/36/36" alt="Group" />
+          <div class="sidebar-title">Hội đá bóng</div>
+        </div>
+        <div class="sidebar-item">
+          <img src="https://picsum.photos/id/102/36/36" alt="Group" />
+          <div class="sidebar-title">Nhóm học tiếng Anh</div>
+        </div>
+        <div class="sidebar-item">
+          <img src="https://picsum.photos/id/103/36/36" alt="Group" />
+          <div class="sidebar-title">Cộng đồng lập trình</div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="story-section">
+          <div class="story">
+            <img src="https://picsum.photos/id/100/110/200" alt="Story" />
+            <div class="story-user">Tạo tin</div>
+          </div>
+          <div class="story">
+            <img src="https://picsum.photos/id/101/110/200" alt="Story" />
+            <div class="story-user">Minh Tuấn</div>
+          </div>
+          <div class="story">
+            <img src="https://picsum.photos/id/102/110/200" alt="Story" />
+            <div class="story-user">Lan Anh</div>
+          </div>
+          <div class="story">
+            <img src="https://picsum.photos/id/103/110/200" alt="Story" />
+            <div class="story-user">Hải Đăng</div>
+          </div>
+          <div class="story">
+            <img src="https://picsum.photos/id/104/110/200" alt="Story" />
+            <div class="story-user">Quỳnh Trang</div>
+          </div>
+          <div class="story">
+            <img src="https://picsum.photos/id/105/110/200" alt="Story" />
+            <div class="story-user">Văn Tùng</div>
+          </div>
+        </div>
+
+        <div class="create-post">
+          <div class="post-top">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="Profile"
+            />
+            <div class="post-input">Bạn đang nghĩ gì?</div>
+          </div>
+          <div class="post-divider"></div>
+          <div class="post-options">
+            <div class="post-option">
+              <i class="fas fa-video"></i>
+              <span>Video trực tiếp</span>
+            </div>
+            <div class="post-option">
+              <i class="fas fa-images"></i>
+              <span>Ảnh/video</span>
+            </div>
+            <div class="post-option">
+              <i class="fas fa-smile"></i>
+              <span>Cảm xúc</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="feed">
+          <div class="post">
+            <div class="post-header">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Profile"
+              />
+              <div class="post-info">
+                <div class="post-user">Nguyễn Thị Mai</div>
+                <div class="post-time">
+                  2 giờ trước <i class="fas fa-globe-asia"></i>
+                </div>
+              </div>
+            </div>
+            <div class="post-content">
+              Hôm nay trời đẹp quá các bạn ơi! Có ai đi chơi cuối tuần không?
+            </div>
+            <div class="post-image">
+              <img src="https://picsum.photos/id/106/680/400" alt="Post" />
+            </div>
+            <div class="post-stats">
+              <div class="post-likes">120 lượt thích</div>
+              <div class="post-comments">25 bình luận • 3 lượt chia sẻ</div>
+            </div>
+            <div class="post-actions">
+              <div class="post-action">
+                <i class="far fa-thumbs-up"></i>
+                <span>Thích</span>
+              </div>
+              <div class="post-action">
+                <i class="far fa-comment"></i>
+                <span>Bình luận</span>
+              </div>
+              <div class="post-action">
+                <i class="fas fa-share"></i>
+                <span>Chia sẻ</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="post">
+            <div class="post-header">
+              <img
+                src="https://randomuser.me/api/portraits/men/22.jpg"
+                alt="Profile"
+              />
+              <div class="post-info">
+                <div class="post-user">Trần Văn Nam</div>
+                <div class="post-time">
+                  5 giờ trước <i class="fas fa-user-friends"></i>
+                </div>
+              </div>
+            </div>
+            <div class="post-content">
+              Chia sẻ với mọi người một bài viết rất hay về công nghệ AI trong
+              năm 2023. AI đang thay đổi thế giới một cách chóng mặt!
+            </div>
+            <div class="post-stats">
+              <div class="post-likes">89 lượt thích</div>
+              <div class="post-comments">15 bình luận • 8 lượt chia sẻ</div>
+            </div>
+            <div class="post-actions">
+              <div class="post-action">
+                <i class="far fa-thumbs-up"></i>
+                <span>Thích</span>
+              </div>
+              <div class="post-action">
+                <i class="far fa-comment"></i>
+                <span>Bình luận</span>
+              </div>
+              <div class="post-action">
+                <i class="fas fa-share"></i>
+                <span>Chia sẻ</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="post">
+            <div class="post-header">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Profile"
+              />
+              <div class="post-info">
+                <div class="post-user">Lê Thị Hương</div>
+                <div class="post-time">
+                  Hôm qua lúc 18:30 <i class="fas fa-globe-asia"></i>
+                </div>
+              </div>
+            </div>
+            <div class="post-content">
+              Mình vừa hoàn thành khóa học lập trình web! Cảm ơn các bạn đã đồng
+              hành cùng mình trong suốt thời gian qua ❤️
+            </div>
+            <div class="post-image">
+              <img src="https://picsum.photos/id/107/680/500" alt="Post" />
+            </div>
+            <div class="post-stats">
+              <div class="post-likes">245 lượt thích</div>
+              <div class="post-comments">42 bình luận • 12 lượt chia sẻ</div>
+            </div>
+            <div class="post-actions">
+              <div class="post-action">
+                <i class="far fa-thumbs-up"></i>
+                <span>Thích</span>
+              </div>
+              <div class="post-action">
+                <i class="far fa-comment"></i>
+                <span>Bình luận</span>
+              </div>
+              <div class="post-action">
+                <i class="fas fa-share"></i>
+                <span>Chia sẻ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="right-sidebar">
+        <div class="sidebar-heading">Người liên hệ</div>
+        <div class="contact-item">
+          <img
+            src="https://randomuser.me/api/portraits/women/12.jpg"
+            alt="Contact"
+          />
+          <div class="contact-name">Ngọc Lan</div>
+          <div class="contact-status"></div>
+        </div>
+        <div class="contact-item">
+          <img
+            src="https://randomuser.me/api/portraits/men/41.jpg"
+            alt="Contact"
+          />
+          <div class="contact-name">Văn Minh</div>
+          <div class="contact-status"></div>
+        </div>
+        <div class="contact-item">
+          <img
+            src="https://randomuser.me/api/portraits/women/32.jpg"
+            alt="Contact"
+          />
+          <div class="contact-name">Thanh Hà</div>
+          <div class="contact-status"></div>
+        </div>
+        <div class="contact-item">
+          <img
+            src="https://randomuser.me/api/portraits/men/19.jpg"
+            alt="Contact"
+          />
+          <div class="contact-name">Quốc Bảo</div>
+          <div class="contact-status"></div>
+        </div>
+        <div class="contact-item">
+          <img
+            src="https://randomuser.me/api/portraits/women/22.jpg"
+            alt="Contact"
+          />
+          <div class="contact-name">Thu Trang</div>
+          <div class="contact-status"></div>
+        </div>
+        <div class="contact-item">
+          <img
+            src="https://randomuser.me/api/portraits/men/65.jpg"
+            alt="Contact"
+          />
+          <div class="contact-name">Hữu Phúc</div>
+          <div class="contact-status"></div>
+        </div>
+        <div class="contact-item">
+          <img
+            src="https://randomuser.me/api/portraits/women/51.jpg"
+            alt="Contact"
+          />
+          <div class="contact-name">Kim Ngân</div>
+          <div class="contact-status"></div>
+        </div>
+
+        <div class="sponsored">
+          <div class="sponsored-title">Được tài trợ</div>
+          <div class="sponsored-item">
+            <img src="https://picsum.photos/id/200/120/120" alt="Sponsored" />
+            <div class="sponsored-info">
+              <div class="sponsored-name">Khóa học lập trình online</div>
+              <div class="sponsored-domain">hoccodeonline.com</div>
+            </div>
+          </div>
+          <div class="sponsored-item">
+            <img src="https://picsum.photos/id/201/120/120" alt="Sponsored" />
+            <div class="sponsored-info">
+              <div class="sponsored-name">Giảm giá 50% giày thể thao</div>
+              <div class="sponsored-domain">thethaogiare.vn</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Tương tác với bài viết
+      document.querySelectorAll(".post-action").forEach((action) => {
+        action.addEventListener("click", function () {
+          const icon = this.querySelector("i");
+          const text = this.querySelector("span");
+
+          if (icon.classList.contains("fa-thumbs-up")) {
+            if (icon.classList.contains("far")) {
+              icon.classList.remove("far");
+              icon.classList.add("fas");
+              icon.style.color = "#1877f2";
+              text.textContent = "Đã thích";
+            } else {
+              icon.classList.remove("fas");
+              icon.classList.add("far");
+              icon.style.color = "";
+              text.textContent = "Thích";
+            }
+          }
+        });
+      });
+
+      // Tương tác với thanh điều hướng
+      document.querySelectorAll(".nav-icon").forEach((icon) => {
+        icon.addEventListener("click", function () {
+          document.querySelector(".nav-icon.active").classList.remove("active");
+          this.classList.add("active");
+        });
+      });
+
+      // Tạo hiệu ứng khi di chuột qua story
+      document.querySelectorAll(".story").forEach((story) => {
+        story.addEventListener("mouseenter", function () {
+          const img = this.querySelector("img");
+          img.style.transform = "scale(1.05)";
+        });
+
+        story.addEventListener("mouseleave", function () {
+          const img = this.querySelector("img");
+          img.style.transform = "scale(1)";
+        });
+      });
+    </script>
+  </body>
+</html>

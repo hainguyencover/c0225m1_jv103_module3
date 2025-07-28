@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bai tap 3</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        margin: 0 auto;
+        padding: 10px 10px;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000;
+        color: white;
+        padding: 15px 30px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .navLeft {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      #logo {
+        font-size: 20px;
+        font-weight: bold;
+        color: #c8c9ca;
+      }
+
+      .menu ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 6px 10px;
+        transition: 0.3s;
+      }
+
+      .menu li a:hover {
+        background-color: #333;
+        border-radius: 4px;
+      }
+
+      .login {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .login img {
+        width: 20px;
+        height: 20px;
+      }
+      .content {
+        height: 600px;
+        display: flex;
+        flex-direction: row;
+      }
+      .contenLeft,
+      .contentRight {
+        width: 20%;
+      }
+      .contentCenter {
+        margin: 20px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+      }
+      .contentLeft,
+      .contentLeft ul,
+      .contentLeft li {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        background-color: rgb(235, 233, 233);
+        list-style: none;
+        position: relative;
+        padding: 10px 20px;
+        line-height: 30px;
+        cursor: pointer;
+      }
+
+      .contentLeft li a {
+        text-decoration: none;
+        color: blue;
+      }
+      .contentRight {
+        background-color: rgb(235, 233, 233);
+      }
+      .button1,
+      .button2 {
+        background-color: rgb(241, 240, 240);
+        border: 0.5px solid rgb(156, 155, 155);
+        border-radius: 5px;
+        padding: 30px;
+      }
+
+      .button1,
+      .button2 {
+        margin: 20px;
+      }
+      .footer {
+        background-color: black;
+        color: white;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="navLeft">
+          <div id="logo">Logo</div>
+          <div class="menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Project</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="login">
+          <img src="login.png" alt="" style="width: 20px; height: 20px" />
+          <div>Login</div>
+        </div>
+      </nav>
+      <div class="content">
+        <div class="contentLeft">
+          <ul>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div>
+        <div class="contentCenter">
+          <h1>Welcome</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eismod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ulamco laboris nisi ut
+            aliquip ex ea commodo consequat. Excepteur sint occaaecat cupidatat
+            non proident, sunt in culpa qui offcia desernut mollit anim it est
+            laborum consectectur adipiscing elit, sed do euismod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea
+            commodo consequat
+          </p>
+          <div style="border: 0.1rem solid rgb(235, 234, 234)"></div>
+          <h3>Test</h3>
+          <p>Lorem ipsum...</p>
+        </div>
+        <div class="contentRight">
+          <div class="button1">ADS</div>
+          <div class="button2">ADS</div>
+        </div>
+      </div>
+      <div class="footer">
+        <h5>Footer Text</h5>
+      </div>
+    </div>
+  </body>
+</html>

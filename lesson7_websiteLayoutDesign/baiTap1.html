@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập 1</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #e5e5e5;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 30px auto;
+        background-color: #c0bdbd;
+        padding: 10px 10px;
+      }
+
+      header,
+      nav,
+      footer {
+        background-color: #ffffff;
+        font-weight: bold;
+        color: #333;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      .content {
+        display: flex;
+        gap: 10px;
+        margin: 10px 0;
+      }
+
+      .contentLeft {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .contentRight {
+        width: 30%;
+      }
+
+      section,
+      article {
+        height: 150px;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        color: #333;
+      }
+
+      aside {
+        height: 310px;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        color: #333;
+      }
+
+      @media (max-width: 768px) {
+        .content {
+          flex-direction: column;
+        }
+
+        .contentLeft,
+        .contentRight {
+          width: 100%;
+        }
+
+        aside {
+          height: auto;
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>&lt;header&gt;</header>
+      <nav>&lt;nav&gt;</nav>
+      <div class="content">
+        <div class="contentLeft">
+          <section>&lt;section&gt;</section>
+          <article>&lt;article&gt;</article>
+        </div>
+        <div class="contentRight">
+          <aside>&lt;aside&gt;</aside>
+        </div>
+      </div>
+      <footer>&lt;footer&gt;</footer>
+    </div>
+  </body>
+</html>
