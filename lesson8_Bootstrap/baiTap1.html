@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .dungImage {
+        padding: 10px;
+      }
+
+      .responsive {
+        padding: 10px;
+        float: left;
+        width: 25%;
+      }
+
+      .gallery {
+        border: 1px solid #ccc;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+      .desc {
+        padding: 10px;
+        text-align: center;
+      }
+
+      /* Màn hình nhỏ hơn 700px: 2 ảnh trên 1 dòng */
+      @media screen and (max-width: 700px) {
+        .responsive {
+          width: 50%;
+        }
+      }
+
+      /* Màn hình nhỏ hơn 500px: 1 ảnh trên 1 dòng */
+      @media screen and (max-width: 500px) {
+        .responsive {
+          width: 100%;
+        }
+      }
+
+      /* Clear float sau gallery */
+      .dungImage::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Responsive Image Gallery</h2>
+    <h4>Resize the browser window to see the effect.</h4>
+
+    <div class="dungImage">
+      <div class="responsive">
+        <div class="gallery">
+          <a
+            target="_blank"
+            href="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg"
+          >
+            <img
+              src="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg"
+              alt="Trolltunga Norway"
+            />
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a
+            target="_blank"
+            href="https://demo.codegym.vn/web/15/gallery/img_forest.jpg"
+          >
+            <img
+              src="https://demo.codegym.vn/web/15/gallery/img_forest.jpg"
+              alt="Forest"
+            />
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a
+            target="_blank"
+            href="https://demo.codegym.vn/web/15/gallery/img_lights.jpg"
+          >
+            <img
+              src="https://demo.codegym.vn/web/15/gallery/img_lights.jpg"
+              alt="Northern Lights"
+            />
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+      </div>
+
+      <div class="responsive">
+        <div class="gallery">
+          <a
+            target="_blank"
+            href="https://demo.codegym.vn/web/15/gallery/img_mountains.jpg"
+          >
+            <img
+              src="https://demo.codegym.vn/web/15/gallery/img_mountains.jpg"
+              alt="Mountains"
+            />
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      This example use media queries to re-arrange the images on different
+      screen sizes: for screens larger than 700px wide, it will show four images
+      side by side, for screens smaller than 700px, it will show two images side
+      by side. For screens smaller than 500px, the images will stack vertically
+      (100%).
+    </p>
+  </body>
+</html>
