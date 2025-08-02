@@ -6,7 +6,6 @@
 </head>
 <body>
 <h1><%= "Hello World!" %>
-    <%!String x="Hello";%>>
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
